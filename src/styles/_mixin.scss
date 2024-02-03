@@ -1,0 +1,39 @@
+@mixin display-flex(
+    $displayFlexType: flex,
+    $justifyContent: null,
+    $alignItems: null,
+    $gap: null,
+    $flexDirection: null
+) {
+    display: $displayFlexType;
+
+    @if $flexDirection {
+        flex-direction: $flexDirection;
+    }
+
+    @if $gap {
+        gap: $gap;
+    }
+
+    @if $alignItems {
+        align-items: $alignItems;
+    }
+
+    @if $justifyContent {
+        justify-content: $justifyContent;
+    }
+}
+
+@mixin ellipsis-one-line {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin ellipsis-after-x-lines($afterXLines) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $afterXLines;
+    -webkit-box-orient: vertical;
+}
