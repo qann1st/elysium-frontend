@@ -1,9 +1,9 @@
-import './App.css'
+import './App.css';
 
-function App() {
+const App = () => {
   return (
     <>Vite + React</>
-  )
-}
+  );
+};
 
-export default App
+export default App;
